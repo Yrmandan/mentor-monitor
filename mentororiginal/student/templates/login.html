@@ -1,0 +1,51 @@
+{%extends 'home.html'%}
+{%block main%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* form
+        {
+            background-color: aqua;
+        } */
+        button {
+  background-color: #fa0707f6; 
+  border: none;
+  color: rgb(241, 238, 238);
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+form
+{
+    margin-left: 600px;
+    width: 350px;
+    margin-top: 100px;
+    background: whitesmoke;
+    color: black;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <pre>
+    <form method="post">{%csrf_token%}
+        <b>Login</b>
+    Name:
+    <input type="text" name="username" required>              
+    Password:
+    <input type="password" name="password" required>      
+
+    <button type="submit">login</button>
+    
+</pre>    
+</form>
+</body>
+</html>
+{%endblock%}

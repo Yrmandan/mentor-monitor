@@ -1,0 +1,65 @@
+{%extends 'home.html'%}
+{%block main%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            margin: auto;
+        }
+        /* form
+        {
+            background-color: aqua;
+        } */
+        button {
+  background-color: #fa0707f6; 
+  border: none;
+  color: rgb(241, 238, 238);
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: auto;
+}
+form
+{
+    margin-left: 600px;
+    width: 400px;
+    {% comment %} margin-top: 50px; {% endcomment %}
+    background: whitesmoke;
+    color: black;
+    border-radius: 10px;
+    border: 30px;
+
+}
+.ac
+{
+    font-size: 30px;
+}
+
+    </style>
+</head>
+<body>
+    <pre>
+    <form method="post">
+        {%csrf_token%}<label class="ac">Register here</label> <div class="ab">
+    Name:
+    <input type="text" name="username" required>
+    Email:
+    <input type="email" name="email" required>
+    Password:
+    <input type="password" name="password" required>
+
+    <button type="submit">Sign up</button>
+</div>
+</pre>    
+</form>
+</body>
+</html>
+{%endblock%}
